@@ -1,6 +1,7 @@
 {
   "name": "context-engineering-with-codex",
   "private": true,
+  "packageManager": "pnpm@10.8.0",
   "type": "module",
   "scripts": {
     "dev": "slidev --port 5173",

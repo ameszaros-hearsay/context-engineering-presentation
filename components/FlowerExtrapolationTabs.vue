@@ -3,6 +3,9 @@ import { computed, ref } from 'vue'
 
 type QualityTab = 'high' | 'low'
 
+const flowersHighSrc = new URL('../public/images/flowers-hiq.jpg', import.meta.url).href
+const flowersLowSrc = new URL('../public/images/flowers-lowq.jpg', import.meta.url).href
+
 const activeTab = ref<QualityTab>('high')
 const revealed = ref<Record<QualityTab, boolean>>({
   high: false,
@@ -10,8 +13,8 @@ const revealed = ref<Record<QualityTab, boolean>>({
 })
 
 const imageSources: Record<QualityTab, string> = {
-  high: '/images/flowers-hiq.jpg',
-  low: '/images/flowers-lowq.jpg',
+  high: flowersHighSrc,
+  low: flowersLowSrc,
 }
 
 const isRevealed = computed(() => revealed.value[activeTab.value])
