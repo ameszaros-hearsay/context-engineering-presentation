@@ -1,5 +1,6 @@
 ---
 theme: nord
+colorSchema: dark
 title: "Context Engineering with Codex: In Practice"
 duration: 45min
 ---
@@ -724,6 +725,37 @@ LSP provides structured semantic guardrails for agents operating in large codeba
 </div>
 
 ---
+layout: two-cols
+class: relative
+---
+
+# Self-verification (UI + runtime)
+
+**Tooling options**
+
+- Playwright MCP
+- Chroome devtools MCP
+
+**Assertions and interaction**
+
+- Planned flow works
+- Network: status + expected responses
+- Console errors = failures
+- Taking screenshots
+
+::right::
+
+**Debugger limits (today)**
+
+- Devtools MCP cannot use breakpoints/stepping
+- Agent loop can’t replicate debugger UX
+
+**Experimental extensions**
+
+- Unofficial “debugger MCP” exists for node.js
+- Evaluate cautiously before adoption
+
+---
 layout: default
 ---
 
@@ -755,37 +787,6 @@ The `AGENTS.md` file is a stateless onboarding guide for a "smart newcomer": com
 
 </div>
 </div>
-
----
-layout: two-cols
-class: relative
----
-
-# Self-verification (UI + runtime)
-
-**Tooling options**
-
-- Playwright MCP
-- Chroome devtools MCP
-
-**Assertions and interaction**
-
-- Planned flow works
-- Network: status + expected responses
-- Console errors = failures
-- Taking screenshots
-
-::right::
-
-**Debugger limits (today)**
-
-- Devtools MCP cannot use breakpoints/stepping
-- Agent loop can’t replicate debugger UX
-
-**Experimental extensions**
-
-- Unofficial “debugger MCP” exists for node.js
-- Evaluate cautiously before adoption
 
 ---
 layout: default
